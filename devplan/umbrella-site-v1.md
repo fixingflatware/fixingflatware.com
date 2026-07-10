@@ -34,5 +34,17 @@ flatware"). NOT flatwire.
 - [ ] Once `fixingflatware.com` DNS is set: add `public/CNAME`, attach domain, enforce HTTPS, 301 `.xyz`→`.com`.
 - [ ] Wire CUTLR footer "Fixing Flatware" reference → live umbrella URL.
 
+## Revision v1.1 — mirror cutlr's `cal` addition (2026-07-11)
+
+CUTLR gained a 6th tool `cal` (Calendly-shaped booking; see cutlr devplan v1.5).
+`cal` is an **internal CUTLR module, not an umbrella product** → the roadmap grid is
+**unchanged** (no new "coming soon" card). Only the CUTLR product card's function list
+is re-synced with cutlr.xyz for consistency.
+
+- [x] CUTLR product card (line 251): added **`bookings`** to the function list →
+      "notes, to-dos, time tracking, scheduling, **bookings** and saved links."
+      (mirrors cutlr's meta-description edit; `bookings` is a function, not a name — fits the umbrella rule.)
+- [x] Commit + push (Pages auto-deploys).
+
 ### Out of scope (v1)
 The actual future products; auth/one-account backend; per-product subpages.
