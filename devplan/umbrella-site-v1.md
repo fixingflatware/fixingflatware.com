@@ -46,5 +46,38 @@ is re-synced with cutlr.xyz for consistency.
       (mirrors cutlr's meta-description edit; `bookings` is a function, not a name — fits the umbrella rule.)
 - [x] Commit + push (Pages auto-deploys).
 
+## Revision v1.2 — add "Spreadsheet database" to the roadmap grid (2026-08-06) ✅
+
+**Trigger:** Bending Spoons agreed to acquire Airtable (announced 2026-08-04, $1.285B cash,
+$2.25B implied equity value; closing expected later this year, pending regulatory approval).
+Three roadmap items already shadow that portfolio — Events (Eventbrite, acquired Mar 2026),
+File transfer (WeTransfer), CUTLR's notes (Evernote). This card covers the highest-ARR
+product of the group (~$480M ARR, +20% YoY, per-seat pricing).
+
+**Scope call:** umbrella product, NOT a CUTLR module (unlike `cal` in v1.1). CUTLR is
+single-user €2.99/mo everyday apps; a shared team database is a different buyer and a
+different price shape. Function-named, no competitor reference, per the v1 rule.
+
+**Naming call:** the market category term is **`no-code database`** (Baserow, NocoDB, Teable,
+SeaTable all self-describe that way). Plain `Database` was rejected: in technical usage it
+means DBaaS (Postgres/Supabase/Neon), a different market. Airtable's own current framing
+(`app platform`, Gartner's LCAP) is enterprise positioning, not the function. Split adopted:
+visible copy carries the plain-English **`Spreadsheet database`** (house style, cf. "File
+transfer", "Site builder"); the searchable category term goes in `<meta name="description">`.
+"Airtable alternative" stays out everywhere, meta included.
+
+- [x] `public/index.html`: 6th "Coming soon" card between Site builder and More
+- [x] `public/index.html`: `<meta name="description">` gains the roadmap clause with `no-code database`
+- [x] `public/index.html`: footer "Tools" column gains `Spreadsheet database — soon`
+      (not in the original plan — caught on the render check; the footer lists every product)
+- [x] Render check at 1280px and 390px: title + `fn` fit on one line on desktop; on mobile the
+      h3 flex wraps to two lines, same as the existing "Link shortener" / "Site builder" cards.
+      No overflow. Grid is now 8 cards, 4 even rows of 2.
+- [x] Commit + push (Pages auto-deploys)
+
+### Deferred
+- Grid ratio: 1 live vs 6 coming-soon weakens principle [06] "Honest by default". Later
+  revision: split into "Next up" (the 2 actually being built) and a compact "On the bench" list.
+
 ### Out of scope (v1)
 The actual future products; auth/one-account backend; per-product subpages.
