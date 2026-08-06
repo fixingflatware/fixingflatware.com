@@ -106,5 +106,31 @@ about pricing honesty argues against itself) and no competitor named, per the v1
   no-token-resale claim. Left alone: the social card has room for one idea, and the roadmap
   clause added in v1.2 already lengthened `meta name="description"`.
 
+## Revision v1.4 — principle [04] carries the free-plan fact (2026-08-06) ✅
+
+**Why:** cutlr v1.6 (`07b1788`) surfaced a house rule from the locked app plan
+(`software/cutlr/ARCHITECTURE.md` §API & MCP): "gate throughput, never access" — MCP is on the
+free plan, paying lifts the rate limit only. That is a rule for every tool, so it belongs in the
+principles grid, and it is more concrete than the generic claim it replaces.
+
+**Correction:** the plan predicted [04] would drop back to two lines. It doesn't — the new body
+is 152 characters against 141, so it renders at the same four lines and stays the tallest of the
+six cells. The swap is concrete-for-generic, not shorter-for-longer. Layout is unaffected (the
+grid row takes the tallest cell), so the copy stands as approved.
+
+- [x] `public/index.html`: [04] body → "…can drive it. It's there on the free plan too — paid
+      plans lift the rate limit." (drops "We don't add an AI surcharge or meter you in credits" —
+      the manifesto paragraph above already carries the token claim)
+- [x] Render check at 1280px and 390px — row ([04][05][06]) aligned, no overflow at either width;
+      see the Correction above for what the check disproved
+- [x] Commit + push
+
+**Not bringing over:** the 20 req/min figure and the tier names — the umbrella has no pricing
+section and names future products by function only.
+
+**Checked, no conflict:** the app plan says "CUTLR ships no chat — bring your own AI" while the
+roadmap grid has an "AI chat" card. Consistent: that card is a separate umbrella product, not a
+CUTLR module — the same distinction that scoped the token claim in v1.3.
+
 ### Out of scope (v1)
 The actual future products; auth/one-account backend; per-product subpages.
