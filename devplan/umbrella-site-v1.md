@@ -79,5 +79,32 @@ transfer", "Site builder"); the searchable category term goes in `<meta name="de
 - Grid ratio: 1 live vs 6 coming-soon weakens principle [06] "Honest by default". Later
   revision: split into "Next up" (the 2 actually being built) and a compact "On the bench" list.
 
+## Revision v1.3 — state the AI business model (2026-08-06) ✅
+
+**What:** the "bring your own AI" idea currently lives only as half a line in principle [04],
+and says how (MCP) but not who pays for what. It gets a manifesto paragraph — the AI surcharge
+is the second wave of the software inflation the manifesto already attacks — and a sharpened [04].
+
+**Honesty call:** "we don't resell you tokens" as an absolute contradicts the AI chat card
+(cheaper conversations = resold inference). Scoped to "…to use our tools": true, and the AI chat
+stays coherent as a product where conversations are what you're openly buying. Rejected:
+switching AI chat to bring-your-own-key (reverses the v1 positioning decision, l.16) and
+dropping the card.
+
+**Copy constraints applied:** no invented price figures (a made-up "€10 → €30" in a manifesto
+about pricing honesty argues against itself) and no competitor named, per the v1 rule.
+
+- [x] `public/index.html`: third manifesto paragraph
+- [x] `public/index.html`: principle [04] body rewritten
+- [x] Render check at 1280px and 390px — [04] is 4 lines against 2–3 for the others; the row
+      ([04][05][06]) stays aligned because the grid row takes the tallest cell. No overflow at
+      either width; on mobile the principles stack single-column as before.
+- [x] Commit + push
+
+### Deferred
+- `og:description` still reads "Honest prices, no lock-in, MCP-native" and does not carry the
+  no-token-resale claim. Left alone: the social card has room for one idea, and the roadmap
+  clause added in v1.2 already lengthened `meta name="description"`.
+
 ### Out of scope (v1)
 The actual future products; auth/one-account backend; per-product subpages.
