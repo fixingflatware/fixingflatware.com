@@ -85,6 +85,11 @@ transfer", "Site builder"); the searchable category term goes in `<meta name="de
 and says how (MCP) but not who pays for what. It gets a manifesto paragraph — the AI surcharge
 is the second wave of the software inflation the manifesto already attacks — and a sharpened [04].
 
+**Superseded by v1.5 (2026-08-06):** the scoping below is gone. AI chat will not resell inference
+either — users buy tokens straight from the provider — so the manifesto now says "We don't resell
+you tokens." with no qualifier. The reasoning is kept because it records why the weaker sentence
+shipped for a day.
+
 **Honesty call:** "we don't resell you tokens" as an absolute contradicts the AI chat card
 (cheaper conversations = resold inference). Scoped to "…to use our tools": true, and the AI chat
 stays coherent as a product where conversations are what you're openly buying. Rejected:
@@ -131,6 +136,44 @@ section and names future products by function only.
 **Checked, no conflict:** the app plan says "CUTLR ships no chat — bring your own AI" while the
 roadmap grid has an "AI chat" card. Consistent: that card is a separate umbrella product, not a
 CUTLR module — the same distinction that scoped the token claim in v1.3.
+
+## Revision v1.5 — split the grid into Next up / On the bench, AI chat becomes bring-your-own-key (2026-08-06) ✅
+
+**Trigger:** two things at once. (a) User decision: AI chat will not resell inference — users buy
+tokens straight from the provider, the app is free + flat price like the rest. The current card
+("capable models under the hood, none of the premium markup") describes the opposite. (b) The
+1-live-against-6-coming-soon ratio, deferred since v1.2, weakens principle [06].
+
+**Split (approved):** Next up = Link shortener, Events. Bench = AI chat, File transfer,
+Site builder, Spreadsheet database.
+- Link shortener: cheapest by an order of magnitude, reuses the CUTLR spine whole, zero marginal cost.
+- Events: adjacent to shipped code (`cal`, `polls`); Eventbrite went to the same owner in Mar 2026.
+- AI chat first on the bench — with BYOK its marginal cost is zero and its trigger is current;
+  benched only because the chat client is a bigger build than Events. First candidate to promote.
+- File transfer: real marginal cost. `ARCHITECTURE.md` requires it to bring its own metering,
+  which is an unsolved design question, not a scheduling one.
+- Site builder: biggest build, weakest trigger. Spreadsheet database: platform-scale; the Airtable
+  price move lands after the deal closes, so 2027.
+
+**Layout:** CUTLR card alone in a single-column `.products.solo` (no re-indentation of the SVG
+card) · `// NEXT UP` label + 2 full cards · `// ON THE BENCH` label + 4 compact cards (name +
+qualifier, no paragraph; `repeat(4,1fr)`, 2 columns under 720px). Reuses the existing `.label`.
+
+- [x] Tools section restructured as above
+- [x] AI chat: fn becomes `your own provider key` — the fn carries the model, since bench items
+      have no paragraph
+- [x] Section sub-line rewritten ("The rest are on the bench" is now inaccurate)
+- [x] Manifesto: drop the "to use our tools" qualifier from "We don't resell you tokens"
+- [x] Render check at 1280px and 390px — three tiers read distinctly at both. Bench items stack
+      name over qualifier (`flex-direction: column` on the h3), which is what makes the longest
+      name, "Spreadsheet database", fit a quarter-width card. Mobile bench is 2 columns.
+- [x] Commit + push
+
+**Accepted loss:** the four benched products lose their paragraph of copy. That is the point of
+the fix — six detailed promises read as a wishlist — and the copy stays in git if one is promoted.
+
+**Not touched:** the footer Tools column still lists all products flat with "— soon". It is a
+link list, not a roadmap, so the grouping does not need to be mirrored there.
 
 ### Out of scope (v1)
 The actual future products; auth/one-account backend; per-product subpages.

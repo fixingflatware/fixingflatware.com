@@ -120,6 +120,15 @@
   .product .go { margin-top: auto; font-family: var(--font-mono); font-size: 13px; color: var(--faint); }
   a.product.live:hover .go { color: var(--accent); }
   .product.soon { opacity: .92; }
+  .products.solo { grid-template-columns: 1fr; }
+  .group-head { margin: 34px 0 14px; }
+  .bench { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  @media (max-width: 720px) { .bench { grid-template-columns: repeat(2, 1fr); } }
+  .bench-item { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); padding: 16px; display: flex; flex-direction: column; gap: 8px; opacity: .92; }
+  .bench-item .em { font-size: 20px; }
+  .bench-item h3 { margin: 0; font-family: var(--font-mono); font-size: 14.5px; font-weight: 600; display: flex; flex-direction: column; gap: 3px; }
+  .bench-item h3 .fn { color: var(--muted); font-weight: 400; font-size: 12.5px; }
+  .bench-note { color: var(--faint); font-size: 13.5px; margin: 18px 0 0; }
 
   /* Closing CTA */
   .cta-close { text-align: center; }
@@ -216,7 +225,7 @@
       <p>
         The same thing is starting again with AI. Tools bolt on an assistant nobody
         asked for, raise the price for it, and meter it in credits you can't audit or
-        take anywhere else. <b>We don't resell you tokens to use our tools.</b> Every
+        take anywhere else. <b>We don't resell you tokens.</b> Every
         tool ships a native MCP server: you point the assistant you already pay for at
         it, and it drives the tool directly. You pay your model provider at their
         price, and us for the tool.
@@ -249,9 +258,9 @@
       <div class="sec-head">
         <span class="label">// <b>THE TOOLS</b></span>
         <h2>One studio, a growing family.</h2>
-        <p>CUTLR is live today. The rest are on the bench — same principles, same one account. New tools ship regularly.</p>
+        <p>CUTLR is live today. Two are next in line, the rest are on the bench — same principles and the same one account for all of them.</p>
       </div>
-      <div class="products">
+      <div class="products solo">
 
         <a class="product live" href="https://cutlr.xyz" target="_blank" rel="noopener">
           <div class="top"><span class="em"><svg width="28" height="28" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6v7M6 6v4M10 6v4M8 13v13"/><path d="M14 6l2.4 4.5-2.4 3.5zM14 14v11"/><path d="M18.5 15.5l2.4 2.4 4.6-5.2"/></svg></span><span class="badge on">● Live</span></div>
@@ -260,17 +269,10 @@
           <span class="go">open cutlr.xyz ↗</span>
         </a>
 
-        <div class="product soon">
-          <div class="top"><span class="em">🎟️</span><span class="badge">Coming soon</span></div>
-          <h3>Events <span class="fn">host &amp; RSVP</span></h3>
-          <p>Create an event page, share a link, manage the guest list — no ticketing fees, no platform tax on getting people in a room.</p>
-        </div>
+      </div>
 
-        <div class="product soon">
-          <div class="top"><span class="em">📦</span><span class="badge">Coming soon</span></div>
-          <h3>File transfer <span class="fn">send big files</span></h3>
-          <p>Drop a file, share a link, done. No account walls, no upsells, no wall of ads.</p>
-        </div>
+      <div class="group-head"><span class="label">// <b>NEXT UP</b></span></div>
+      <div class="products">
 
         <div class="product soon">
           <div class="top"><span class="em">🔗</span><span class="badge">Coming soon</span></div>
@@ -279,30 +281,21 @@
         </div>
 
         <div class="product soon">
-          <div class="top"><span class="em">💬</span><span class="badge">Coming soon</span></div>
-          <h3>AI chat <span class="fn">cheaper conversations</span></h3>
-          <p>The same everyday AI chat, at a fraction of the price. Capable models under the hood, none of the premium markup.</p>
-        </div>
-
-        <div class="product soon">
-          <div class="top"><span class="em">🧱</span><span class="badge">Coming soon</span></div>
-          <h3>Site builder <span class="fn">sites &amp; landing pages</span></h3>
-          <p>Build and publish landing pages and simple sites — drag, drop, go live. No code, and no monthly ransom to unlock the "pro" features.</p>
-        </div>
-
-        <div class="product soon">
-          <div class="top"><span class="em">🗃️</span><span class="badge">Coming soon</span></div>
-          <h3>Spreadsheet database <span class="fn">shared tables and views</span></h3>
-          <p>Typed columns, linked records, filtered views and forms — a database your whole team can use, priced per workspace instead of per seat.</p>
-        </div>
-
-        <div class="product soon">
-          <div class="top"><span class="em">➕</span><span class="badge">On the bench</span></div>
-          <h3>More <span class="fn">shipping regularly</span></h3>
-          <p>There's always another bent tool to straighten. Follow along and tell us which one hurts most.</p>
+          <div class="top"><span class="em">🎟️</span><span class="badge">Coming soon</span></div>
+          <h3>Events <span class="fn">host &amp; RSVP</span></h3>
+          <p>Create an event page, share a link, manage the guest list — no ticketing fees, no platform tax on getting people in a room.</p>
         </div>
 
       </div>
+
+      <div class="group-head"><span class="label">// <b>ON THE BENCH</b></span></div>
+      <div class="bench">
+        <div class="bench-item"><span class="em">💬</span><h3>AI chat <span class="fn">your own provider key</span></h3></div>
+        <div class="bench-item"><span class="em">📦</span><h3>File transfer <span class="fn">send big files</span></h3></div>
+        <div class="bench-item"><span class="em">🧱</span><h3>Site builder <span class="fn">sites &amp; landing pages</span></h3></div>
+        <div class="bench-item"><span class="em">🗃️</span><h3>Spreadsheet database <span class="fn">shared tables and views</span></h3></div>
+      </div>
+      <p class="bench-note">There's always another bent tool to straighten. Follow along and tell us which one hurts most.</p>
     </div>
   </section>
 
